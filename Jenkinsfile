@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Debug') {
+            steps {
+                sh 'pwd'
+                sh 'ls -l'
+            }
+        }
         stage('Build') {
             steps {
                 build 'PES1UG21CS712-1'
